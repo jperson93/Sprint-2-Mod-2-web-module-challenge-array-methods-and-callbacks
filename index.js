@@ -7,15 +7,32 @@ Practice accessing data by console.log-ing the following pieces of data note.
 
 💡 HINT: You may want to filter the data first 😉*/
 
+
+const finals2014 = fifaData.filter((team) => {
+    return team.Year === 2014 && team.Stage === 'Final';
+  });
+  
+  console.log(finals2014);
+
 //(a) Home Team name for 2014 world cup final
+
+console.log('task 1a:', finals2014[0]['Home Team Name']);
 
 //(b) Away Team name for 2014 world cup final
 
+console.log('task 1b:', finals2014[0]['Away Team Name']);
+
 //(c) Home Team goals for 2014 world cup final
+
+console.log('task 1c:', finals2014[0]['Home Team Goals']);
 
 //(d) Away Team goals for 2014 world cup final
 
+console.log('task 1d:', finals2014[0]['Away Team Goals']);
+
 //(e) Winner of 2014 world cup final */
+
+console.log('task 1e:', finals2014[0]['Win conditions']);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -26,10 +43,15 @@ Use getFinals to do the following:
 💡 HINT - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-    /* code here */
- }
-
+function getFinals(array) {
+    const finalTeams = fifaData.filter((teams) => {
+      return teams.Stage === 'Final';
+    })
+    return finalTeams;
+  }
+ 
+ console.log(getFinals(fifaData)); 
+ 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
